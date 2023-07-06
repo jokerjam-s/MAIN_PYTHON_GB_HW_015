@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 
 from parce_date.days_except import ParceDaysExceptions, WrongFormatDate, WeekNumberError, WeekDayNameError, \
     MonthNameError
+from log_saver.log_saver import Log
 
 __all__ = ['TextToDate']
 
@@ -64,6 +65,7 @@ class TextToDate:
             month_text = month_text[:3]
         return self._MONTHS.get(month_text, None)
 
+    @Log('date_log.log', __name__)
     def __call__(self, text: str) -> datetime | ParceDaysExceptions:
         self.text = text
         self._calc_date()
