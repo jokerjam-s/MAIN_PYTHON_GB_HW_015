@@ -4,7 +4,7 @@
 import logging
 from typing import Callable
 
-FORMAT_LOG = "{levelname:<8} :{asctime} :{name} :{msg}"
+FORMAT_LOG = "{levelname:<8} {asctime} {name} {msg}"
 
 
 class Log:

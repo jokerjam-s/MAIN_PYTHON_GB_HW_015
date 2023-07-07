@@ -58,11 +58,11 @@ class TextToDate:
         return
 
     def _parse_day(self, day_text) -> int | None:
-        return self._WEEK_DAYS.get(day_text, None)
+        return self._WEEK_DAYS.get(day_text.lower(), None)
 
     def _parse_month(self, month_text) -> int | None:
         if len(month_text) > 3:
-            month_text = month_text[:3]
+            month_text = month_text[:3].lower()
         return self._MONTHS.get(month_text, None)
 
     @Log('date_log.log', __name__)
