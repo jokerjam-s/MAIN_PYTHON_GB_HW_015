@@ -3,7 +3,7 @@
 import logging
 from datetime import datetime, timedelta
 
-from parce_date.days_except import ParceDaysExceptions, WrongFormatDate, WeekNumberError, WeekDayNameError, \
+from date_parser.days_except import ParceDaysExceptions, WrongFormatDate, WeekNumberError, WeekDayNameError, \
     MonthNameError
 from log_saver.log_saver import Log
 
